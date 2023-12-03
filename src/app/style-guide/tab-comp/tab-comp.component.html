@@ -1,0 +1,13 @@
+
+<div nz-row [ngSwitch] = "data.type">
+    <div nz-col nzSpan="3">
+        <button nz-button nzType="primary" *ngSwitchCase="'cust'" (click)="createCustomerComponentModal()" style="height: 35px;"> 
+            <span nz-icon nzType="user" nzTheme="outline" ></span>{{data.name}} 
+        </button>
+    </div>
+    <div nz-col nzSpan="3">
+        <button nz-button nzType="primary" *ngSwitchCase="'gold'" (click)="createCustomerComponentModal()" style="height: 33px;"> 
+            <span nz-icon nzType="gold" nzTheme="outline" ></span>{{data.name}} 
+        </button>
+    </div>
+</div>

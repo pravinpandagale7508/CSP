@@ -1,0 +1,23 @@
+
+<div nz-row class="back_ground" style="width: 100%;">
+    <div nz-col nzSpan="24" style="border:1px solid;">
+        <nz-layout>
+            <nz-header style="height: 35px;margin-top: 10px;"> 
+                <ng-container  *ngFor="let tab of tabs">
+                    <app-cust-tab [cardRef]="myTemplateRef" [item]="tab"></app-cust-tab>
+                </ng-container>
+            </nz-header>
+            <nz-content>
+              <div style=" background: #e7e4e4; min-height: 40vw;">                
+                <router-outlet></router-outlet>
+              </div>
+            </nz-content>
+            <nz-footer style="text-align: center;"></nz-footer>
+        </nz-layout>
+    </div>
+</div>
+
+<ng-template #myTemplateRef let-data="data">  
+    <app-tab-comp [data]="data"></app-tab-comp>
+</ng-template>
+  

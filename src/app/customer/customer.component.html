@@ -1,0 +1,39 @@
+
+<nz-table #basicTable1 [nzData]="[{name:''}]">
+    
+    <tbody>
+      <tr>
+        <td><input (keyup)="onKeyUp('companyName')" nz-input placeholder="CompanyName" [(ngModel)]="custFilterDto.companyName" type="text" />
+        </td>
+        <td><input (keyup)="onKeyUp('address')" nz-input placeholder="Address" [(ngModel)]="custFilterDto.address" type="text" /></td>
+        <td><input (keyup)="onKeyUp('countryId')" nz-input placeholder="CountryId" [(ngModel)]="custFilterDto.countryId" type="text" /></td>
+        <td><input (keyup)="onKeyUp('agentId')" nz-input placeholder="Agent Id" [(ngModel)]="custFilterDto.agentId" type="text" /></td>
+        <td><input (keyup)="onKeyUp('networkId')" nz-input placeholder="AetworkId" [(ngModel)]="custFilterDto.networkId" type="text" /></td>
+      </tr>
+    </tbody>
+  </nz-table>
+
+<nz-table #basicTable [nzData]="customers">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>CrmId</th>
+        <th>Address</th>
+        <th>CountryId</th>
+        <th>FunctionId</th>
+        <th>AgentId</th>
+        <th>NetworkId</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.companyName }}</td>
+        <td>{{ data.crmId }}</td>
+        <td>{{ data.address }}</td>
+        <td>{{data.countryId}}        </td>
+        <td>{{ data.functionId }}</td>
+        <td>{{ data.agentId }}</td>
+        <td>{{ data.networkId }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
