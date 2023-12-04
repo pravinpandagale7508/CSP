@@ -1,6 +1,8 @@
-Project contains:
+**Project contains**:
     - Code reusability using ngTemplateOutlet and ngTemplateOutletContext
+    
     - Singletone design pattern
+    
     - Dependancy injection
     - Builder designpattern
     - Observer design pattern
